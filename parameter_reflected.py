@@ -1,6 +1,7 @@
 import argparse
 import requests
 from urllib.parse import urlparse, parse_qs
+from pyfiglet import Figlet
 
 def find_reflected_params(url):
     response = requests.get(url)
@@ -25,9 +26,14 @@ def check_reflected_params(urls):
                 print(f"Parameter: {param}\tValue: {value}")
             print()
         else:
-            print(f"no reflected URL parameters found in: {url}\n")
+            print(f"No reflected URL parameters found in: {url}\n")
 
 def main():
+    # Generate and display banner with your name
+    f = Figlet(font='slant')
+    banner = f.renderText('Sohail Shaikh')
+    print(banner)
+
     parser = argparse.ArgumentParser(description='Check for reflected URL parameters in the response.')
     parser.add_argument('file', type=str, help='Path to the file containing URLs')
     args = parser.parse_args()

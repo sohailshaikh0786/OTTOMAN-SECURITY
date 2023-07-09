@@ -21,12 +21,12 @@ def check_reflected_params(urls):
         reflected_params = find_reflected_params(url)
         if len(reflected_params) > 0:
             print(f"URL: {url}")
-            print("Reflected URL parameters:")
+            print("Reflected parameters:")
             for param, value in reflected_params:
                 print(f"Parameter: {param}\tValue: {value}")
             print()
         else:
-            print(f"No reflected URL parameters found in: {url}\n")
+            print(f"No reflected parameters found in: {url}\n")
 
 def main():
     # Generate and display banner with your name

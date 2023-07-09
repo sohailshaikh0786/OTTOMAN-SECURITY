@@ -25,7 +25,7 @@ def check_reflected_params(urls):
                 print(f"Parameter: {param}\tValue: {value}")
             print()
         else:
-            print(f"No reflected URL parameters found in: {url}\n")
+            print(f"sorry no reflected URL parameters found in: {url}\n")
 
 def main():
     parser = argparse.ArgumentParser(description='Check for reflected URL parameters in the response.')
